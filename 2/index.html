@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rule 2: Flexbox has 2 axis: main axis & secondary axis.</title>
+    <style>
+        body {
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+        }
+
+        main {
+            max-width: 450px;
+            margin: 0 auto;
+        }
+
+        /* This is the flex-container */
+        .flexible-father {
+            display: flex;
+            background: lightgrey;
+            max-width: 400px;
+            height: 200px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .flexible-father>* {
+            height: 100px;
+            padding: 1rem;
+            color: white;
+        }
+
+        /* These are the flex-items */
+        .flexible-child-1 {
+            background: red;
+        }
+
+        .flexible-child-2 {
+            background: green;
+        }
+
+        .flexible-child-3 {
+            background: blue;
+        }
+
+        .father1 {
+            flex-direction: row;
+        }
+
+        .father2 {
+            flex-direction: row-reverse;
+        }
+
+        .father3 {
+            flex-direction: column;
+        }
+
+        .father4 {
+            flex-direction: column-reverse;
+        }
+
+    </style>
+</head>
+
+<body>
+    <a href="../">Come back</a>
+    <main>
+        <h1>Rule 2: Flexbox has 2 axis: main axis & secondary axis.</h1>
+
+        <h2>Main axis as <mark>row</mark> (by default) </h2>
+
+        <section class="flexible-father father1">
+            <article class="flexible-child-1">Child A</article>
+            <article class="flexible-child-2">Child B</article>
+            <article class="flexible-child-3">Child C</article>
+        </section>
+
+        <h2>Main axis as <mark>row reverse</mark> (by default) </h2>
+
+        <section class="flexible-father father2">
+            <article class="flexible-child-1">Child A</article>
+            <article class="flexible-child-2">Child B</article>
+            <article class="flexible-child-3">Child C</article>
+        </section>
+
+        <h2>Main axis as <mark>column</mark> (by default) </h2>
+
+        <section class="flexible-father father3">
+            <article class="flexible-child-1">Child A</article>
+            <article class="flexible-child-2">Child B</article>
+            <article class="flexible-child-3">Child C</article>
+        </section>
+
+        <h2>Main axis as <mark>column-reverse</mark> (by default) </h2>
+
+        <section class="flexible-father father4">
+            <article class="flexible-child-1">Child A</article>
+            <article class="flexible-child-2">Child B</article>
+            <article class="flexible-child-3">Child C</article>
+        </section>
+
+    </main>
+
+</body>
+
+</html>

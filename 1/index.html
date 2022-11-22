@@ -7,6 +7,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rule 1: It's required one parent container(flex-container) and at least one child(flex-item).</title>
     <style>
+        main {
+            max-width: 450px;
+            margin: 0 auto;
+        }
+
         /* This is the flex-container */
         .flexible-father {
             display: flex;
@@ -37,13 +42,17 @@
 </head>
 
 <body>
-    <h1>Rule 1: It's required one parent container(flex-container) and at least one child(flex-item).</h1>
 
-    <section class="flexible-father">
-        <article class="flexible-child-1">Child A</article>
-        <article class="flexible-child-2">Child B</article>
-        <article class="flexible-child-3">Child C</article>
-    </section>
+    <a href="../">Come back</a>
+    <main>
+        <h1>Rule 1: It's required one parent container(flex-container) and at least one child(flex-item).</h1>
+        <section class="flexible-father">
+            <article class="flexible-child-1">Child A</article>
+            <article class="flexible-child-2">Child B</article>
+            <article class="flexible-child-3">Child C</article>
+        </section>
+
+    </main>
 
 </body>
 

@@ -60,10 +60,50 @@ That is what we get:
 
 ![](./1/r1-flexbox.png)
 
-
-
 ## Rule 2: Flexbox has 2 axis (main axis and secondary axis).
 
 ![](./2/r2-2AXIS.png)
 
-As we see by default 
+Main axis is where child elements of a flex container are distributed. And by default, as we see  along a **row** even if they are ***block*** elements (like in this case that child elements are article that is a block element in HTML). 
+
+But we could change direction of main axis by adding property **flex-direction** with following values: ***row***, ***row-reverse***, ***column***, ***column-reverse***. 
+
+![](./2/row.png)
+
+```css
+.flexible-father {
+    flex-direction:row;
+}
+```
+
+
+
+![](./2/row-reverse.png)
+
+```css
+.flexible-father {
+    flex-direction:row-reverse;
+}
+```
+
+
+
+![](./2/column.png)
+
+```css
+.flexible-father {
+    flex-direction:column;
+}
+```
+
+
+
+
+
+![](./2/column-reverse.png)
+
+```css
+.flexible-father {
+    flex-direction:column-reverse;
+}
+```
