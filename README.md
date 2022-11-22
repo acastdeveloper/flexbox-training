@@ -4,19 +4,24 @@
 
 ## SUMMARY
 
-- **Rule 1**: It's required one parent container(flex-container) and at least one child(flex-item).
+1. ONE FLEXBOX CONTAINER AND AT LEAST ONE FLEXBOX ITEM.
+2. FLEXBOX HAS TWO AXIS: **<mark>MAIN AXIS</mark> ** AND  **<mark>SECONDARY AXIS</mark>**. DIRECTION OF MAIN AXIS.
+3. WRAPPING ELEMENTS. FLEXBOX MAKES JUMP ELEMENTS TO A PARALLEL MAIN AXIS IF THEY DON'T FIT IN THE CURRENT ONE
 
 ## INTRODUCTION
 
 This is just for training and remembering about flexbox with some documentation. It's made following Udemy course "Curso de FlexBox desde 0" that I recommend you if you are spanish talker: [Free CSS Flexbox Tutorial - Curso de FlexBox desde 0 | Udemy](https://www.udemy.com/course/curso-de-flexbox-desde-0). At this moment is free and very well explained. Author Erick Mines purpose us 10 gold rules to understanding the flexbox system of layout of css module since CSS3 version to get "flexible boxes" in order to do responsive design for all kind of interfaces, sizes and every device.
 
-## Rule 1: One Flex-container & at least 1 flex-item
+---
 
-It's required one parent container element(<mark>flex-container</mark>) and at least one child element(<mark>flex-item</mark>).
+## 1. ONE FLEXBOX CONTAINER AND AT LEAST ONE FLEXBOX ITEM
 
-### Example
+### It's required one parent container element(<mark>flex-container</mark>) and at least one child element(<mark>flex-item</mark>).
 
-In our **html** we have a flex-container(*flexible-father*) and inside several childs(*flexible-child-#*):
+#### Example
+
+In our **html** we have a **flex-container** (*"flexible-father"*) and several 
+**flex-items** (*"flexible-child-#"*) inside as it follows:
 
 ```html
 <section class="flexible-father">
@@ -60,13 +65,15 @@ That is what we get:
 
 ![](./1/r1-flexbox.png)
 
-## Rule 2: Flexbox has 2 axis (main axis and secondary axis).
+----
+
+## 2. FLEXBOX HAS TWO AXIS: MAIN AXIS AND SECONDARY AXIS. DIRECTION OF MAIN AXIS.
 
 ![](./2/r2-2AXIS.png)
 
-Main axis is where child elements of a flex container are distributed. And by default, as we see  along a **row** even if they are ***block*** elements (like in this case that child elements are article that is a block element in HTML). 
+Main axis is where child elements of a flex container are distributed. And by default, as we see  along a **row** even if they are ***block*** elements (like in this case that child elements are article that is a block element in HTML).
 
-But we could change direction of main axis by adding property **flex-direction** with following values: ***row***, ***row-reverse***, ***column***, ***column-reverse***. 
+But we could change direction of main axis by adding property **flex-direction** with following values: ***row***, ***row-reverse***, ***column***, ***column-reverse***.
 
 ![](./2/row.png)
 
@@ -76,8 +83,6 @@ But we could change direction of main axis by adding property **flex-direction**
 }
 ```
 
-
-
 ![](./2/row-reverse.png)
 
 ```css
@@ -85,8 +90,6 @@ But we could change direction of main axis by adding property **flex-direction**
     flex-direction:row-reverse;
 }
 ```
-
-
 
 ![](./2/column.png)
 
@@ -96,10 +99,6 @@ But we could change direction of main axis by adding property **flex-direction**
 }
 ```
 
-
-
-
-
 ![](./2/column-reverse.png)
 
 ```css
@@ -107,3 +106,13 @@ But we could change direction of main axis by adding property **flex-direction**
     flex-direction:column-reverse;
 }
 ```
+
+## 3. WRAPPING ELEMENTS. FLEXBOX MAKES JUMP ELEMENTS TO A PARALLEL MAIN AXIS IF THEY DON'T FIT IN THE CURRENT ONE
+
+### (<mark>flex-wrap: no-wrap | wrap | wrap-reverse;</mark>)
+
+![](./3/no-wrap.png)
+
+![](./3/wrap.png)
+
+![](./3/wrap-reverse.png)

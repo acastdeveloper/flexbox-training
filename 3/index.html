@@ -5,8 +5,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>2. FLEXBOX HAS TWO AXIS: MAIN AXIS AND SECONDARY AXIS. DIRECTION OF MAIN AXIS.</title>
+    <title>3. WRAPPING ELEMENTS. FLEXBOX MAKES JUMP ELEMENTS TO A PARALLEL MAIN AXIS IF THEY DON'T FIT IN THE CURRENT
+        ONE.
+    </title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
+
         body {
             font-family: Verdana, Geneva, Tahoma, sans-serif;
         }
@@ -16,18 +22,23 @@
             margin: 0 auto;
         }
 
+        h1 {
+            margin-bottom: 5rem;
+        }
+
         /* This is the flex-container */
         .flexible-father {
             display: flex;
             background: lightgrey;
             max-width: 400px;
             height: 200px;
-            margin: 0 auto;
+            margin: 0 auto 6rem auto;
             padding: 1rem;
         }
 
         .flexible-father>* {
             height: 100px;
+            width: 100px;
             padding: 1rem;
             color: white;
         }
@@ -45,70 +56,72 @@
             background: blue;
         }
 
+        .flexible-child-4 {
+            background: violet;
+        }
+
+        .flexible-child-5 {
+            background: orangered;
+        }
+
+        .flexible-child-6 {
+            background: darkolivegreen;
+        }
+
         .father1 {
             flex-direction: row;
         }
 
         .father2 {
-            flex-direction: row-reverse;
+            flex-direction: row;
+            flex-wrap: wrap;
         }
 
         .father3 {
-            flex-direction: column;
-        }
-
-        .father4 {
-            flex-direction: column-reverse;
+            flex-direction: row;
+            flex-wrap: wrap-reverse;
         }
 
     </style>
 </head>
 
 <body>
-    <a href="../">Come back</a>
+    <a href="../index.html">Come back</a>
     <main>
-        <h1>Flexbox has 2 axis: main axis & secondary axis. <br>
-            <mark>flex-direction: row |row-reverse | column |
-                column-reverse;</mark>
-        </h1>
+        <h1>3. WRAPPING ELEMENTS. FLEXBOX MAKES JUMP ELEMENTS TO A PARALLEL MAIN AXIS IF THEY DON'T FIT IN THE CURRENT
+            ONE </h1>
 
-        <img src="./r2-2AXIS.png" />
-
-        <h2>Main axis as <mark>row</mark> (by default)</h2>
-        <pre>.flexible-father { flex-direction:row; }</pre>
-
+        <h2>Default behavour. <br>(<mark>flex-wrap:no-wrap</mark>) </h2>
 
         <section class="flexible-father father1">
             <article class="flexible-child-1">Child A</article>
             <article class="flexible-child-2">Child B</article>
             <article class="flexible-child-3">Child C</article>
+
+            <article class="flexible-child-4">Child A</article>
+            <article class="flexible-child-5">Child B</article>
         </section>
 
-        <h2>Main axis as <mark>row reverse</mark> (by default) </h2>
-        <pre>.flexible-father { flex-direction:row-reverse; }</pre>
+        <h2>With <mark>flex-wrap:wrap;</mark></h2>
 
         <section class="flexible-father father2">
             <article class="flexible-child-1">Child A</article>
             <article class="flexible-child-2">Child B</article>
             <article class="flexible-child-3">Child C</article>
+
+            <article class="flexible-child-4">Child A</article>
+            <article class="flexible-child-5">Child B</article>
         </section>
 
-        <h2>Main axis as <mark>column</mark> (by default) </h2>
-        <pre>.flexible-father { flex-direction:column; }</pre>
+        <h2>With <mark>flex-wrap:wrap-reverse</mark> </h2>
 
         <section class="flexible-father father3">
             <article class="flexible-child-1">Child A</article>
             <article class="flexible-child-2">Child B</article>
             <article class="flexible-child-3">Child C</article>
-        </section>
 
-        <h2>Main axis as <mark>column-reverse</mark> (by default) </h2>
-        <pre>.flexible-father { flex-direction:column-reverse; }</pre>
-
-        <section class="flexible-father father4">
-            <article class="flexible-child-1">Child A</article>
-            <article class="flexible-child-2">Child B</article>
-            <article class="flexible-child-3">Child C</article>
+            <article class="flexible-child-4">Child A</article>
+            <article class="flexible-child-5">Child B</article>
         </section>
 
     </main>
