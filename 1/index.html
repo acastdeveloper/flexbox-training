@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rule 1: It's required one parent container(flex-container) and at least one child(flex-item).</title>
+    <style>
+        /* This is the flex-container */
+        .flexible-father {
+            display: flex;
+            background: lightgrey;
+            max-width: 400px;
+            margin: 0 auto;
+            padding: 1rem;
+        }
+
+        .flexible-father>* {
+            height: 200px;
+        }
+
+        /* These are the flex-items */
+        .flexible-child-1 {
+            background: red;
+        }
+
+        .flexible-child-2 {
+            background: green;
+        }
+
+        .flexible-child-3 {
+            background: blue;
+        }
+
+    </style>
+</head>
+
+<body>
+    <h1>Rule 1: It's required one parent container(flex-container) and at least one child(flex-item).</h1>
+
+    <section class="flexible-father">
+        <article class="flexible-child-1">Child A</article>
+        <article class="flexible-child-2">Child B</article>
+        <article class="flexible-child-3">Child C</article>
+    </section>
+
+</body>
+
+</html>
